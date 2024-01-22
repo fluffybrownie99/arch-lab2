@@ -1,0 +1,52 @@
+{
+    "media_upload": {
+        "count": 1520,
+        "events": [
+            {
+                "received_timestamp": "2024-01-21 16:53:33.226429",
+                "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:33.147902",
+                "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:33.052814",
+                "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:32.926664",
+                "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:32.837332",
+                "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
+            }
+        ]
+    },
+    "media_playback": {
+        "count": 182,
+        "events": [
+            {
+                "received_timestamp": "2024-01-21 16:53:33.259145",
+                "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:33.179064",
+                "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:33.115645",
+                "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:33.005332",
+                "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
+            },
+            {
+                "received_timestamp": "2024-01-21 16:53:32.878713",
+                "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
+            }
+        ]
+    }
+}

@@ -5,7 +5,7 @@ files = {'file': open(file_path, 'rb')}  # Open the file in binary read mode
 data = {
     'mediaType': 'photo',
     'fileSize': '1024',  # Size in bytes as a string
-    'uploadTimestamp': '2023-01-12T10:00:00'
+    'uploadTimestamp': '2023-03-02 142704'
 }
 
 response = requests.post(media_upload_url, files=files, data=data)
