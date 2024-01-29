@@ -1,50 +1,50 @@
 {
     "media_upload": {
-        "count": 2365,
+        "count": 54,
         "events": [
             {
-                "received_timestamp": "2024-01-22 09:34:45.502460",
+                "received_timestamp": "2024-01-22 10:00:07.240511",
                 "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.483456",
+                "received_timestamp": "2024-01-22 10:00:07.217507",
                 "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.465452",
+                "received_timestamp": "2024-01-22 10:00:07.193501",
                 "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.430444",
+                "received_timestamp": "2024-01-22 10:00:07.170496",
                 "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.363873",
+                "received_timestamp": "2024-01-22 10:00:07.130487",
                 "msg_data": "mediaType: photo, fileSize: 1028, uploadTimestamp: 2023-03-02 142704"
             }
         ]
     },
     "media_playback": {
-        "count": 1167,
+        "count": 42,
         "events": [
             {
-                "received_timestamp": "2024-01-22 09:34:45.512462",
+                "received_timestamp": "2024-01-28 14:34:56.261677",
+                "msg_data": "mediaId: 01, playbackStartTime: 2023-03-02 142704, userID: 1, playbackId: 1"
+            },
+            {
+                "received_timestamp": "2024-01-22 10:00:07.254515",
                 "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.489458",
+                "received_timestamp": "2024-01-22 10:00:07.228509",
                 "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.474454",
+                "received_timestamp": "2024-01-22 10:00:07.201503",
                 "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
             },
             {
-                "received_timestamp": "2024-01-22 09:34:45.452449",
-                "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
-            },
-            {
-                "received_timestamp": "2024-01-22 09:34:45.442447",
+                "received_timestamp": "2024-01-22 10:00:07.180498",
                 "msg_data": "mediaId: 01, playbackId: 1, playbackStartTime: 2023-03-02 142704, userID: 1"
             }
         ]

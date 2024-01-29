@@ -7,6 +7,46 @@
       </elementProp>
     </TestPlan>
     <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="randomdevice" elementType="Argument">
+            <stringProp name="Argument.name">randomdevice</stringProp>
+            <stringProp name="Argument.value">${__Random(1,1000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randomdate" elementType="Argument">
+            <stringProp name="Argument.name">randomdate</stringProp>
+            <stringProp name="Argument.value">${__RandomDate(,,2050-07-08,,)}  </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randomtime" elementType="Argument">
+            <stringProp name="Argument.name">randomtime</stringProp>
+            <stringProp name="Argument.value">${__Random(0,23,)}:${__Random(0,59,)}:${__Random(0,59,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randommediaID" elementType="Argument">
+            <stringProp name="Argument.name">randommediaID</stringProp>
+            <stringProp name="Argument.value">${__Random(1,100)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randomplaybackID" elementType="Argument">
+            <stringProp name="Argument.name">randomplaybackID</stringProp>
+            <stringProp name="Argument.value">${__Random(1,10000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randomuserID" elementType="Argument">
+            <stringProp name="Argument.name">randomuserID</stringProp>
+            <stringProp name="Argument.value">${__Random(1,100)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="randomfilesize" elementType="Argument">
+            <stringProp name="Argument.name">randomfilesize</stringProp>
+            <stringProp name="Argument.value">${__Random(1,100000)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
         <intProp name="ThreadGroup.num_threads">10</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
@@ -23,7 +63,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/home/media/upload?deviceId=11</stringProp>
+          <stringProp name="HTTPSampler.path">/home/media/upload?deviceId=${randomdevice}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -50,14 +90,14 @@
               </elementProp>
               <elementProp name="fileSize" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">1028</stringProp>
+                <stringProp name="Argument.value">${randomfilesize}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">fileSize</stringProp>
               </elementProp>
               <elementProp name="uploadTimestamp" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">2023-03-02 142704</stringProp>
+                <stringProp name="Argument.value">${__RandomDate(,,2050-07-08,,)}  ${__Random(0,23,)}:${__Random(0,59,)}:${__Random(0,59,)}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">uploadTimestamp</stringProp>
@@ -117,7 +157,7 @@
           <stringProp name="HTTPSampler.port">8080</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/home/media/playback?deviceId=11</stringProp>
+          <stringProp name="HTTPSampler.path">/home/media/playback?deviceId=${randomdevice}</stringProp>
           <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -127,10 +167,10 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;mediaId&quot;: &quot;01&quot;,&#xd;
-  &quot;playbackId&quot;: 1,&#xd;
-  &quot;playbackStartTime&quot;: &quot;2023-03-02 142704&quot;,&#xd;
-  &quot;userID&quot;: &quot;1&quot;&#xd;
+  &quot;mediaId&quot;: &quot;${randommediaID}&quot;,&#xd;
+  &quot;playbackId&quot;: ${randomplaybackID},&#xd;
+  &quot;playbackStartTime&quot;: &quot;${__RandomDate(,,2050-07-08,,)} ${__Random(0,23,)}:${__Random(0,59,)}:${__Random(0,59,)}&quot;,&#xd;
+  &quot;userID&quot;: &quot;${randomuserID}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>

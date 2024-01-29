@@ -95,11 +95,19 @@ paths:
                 playbackStartTime:
                   type: string
                   format: date-time
+                  example: "2024-01-24T10:00:00Z"
                 userID:
                   type: string
                   format: uuid
                   description: Unique user identifier.
+                  example: "123e4567-e89b-12d3-a456-426614174000"
                 playbackId:
                   type: integer
                   format: int64
                   description: Identifier for each playback event (in case multiple users accessing the same media)
+                  example: 101
+                playbackDuration:
+                  type: integer
+                  format: int32
+                  description: Duration of the playback in seconds.
+                  example: 3600

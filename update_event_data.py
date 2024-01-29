@@ -1,9 +1,9 @@
 import datetime
 import json
+EVENTFILE = "events.json"
+MAX_EVENTS = 5
 
 def update_event_data(event_type, event_data):
-    EVENTFILE = "events.json"
-    MAX_EVENTS = 5
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")
     formatted_data = ", ".join([f"{key}: {event_data[key]}" for key in event_data])
     event = {
