@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -71,9 +73,9 @@
           <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
-              <elementProp name="C:\Users\ramit\Desktop\bcit\sem4\microsevarch\lab2\test.jpg" elementType="HTTPFileArg">
+              <elementProp name="C:\Users\ramit\Desktop\Sem4\ACIT_3855_Architectures\lab2\test.jpg" elementType="HTTPFileArg">
                 <stringProp name="File.mimetype">image/jpeg</stringProp>
-                <stringProp name="File.path">C:\Users\ramit\Desktop\bcit\sem4\microsevarch\lab2\test.jpg</stringProp>
+                <stringProp name="File.path">C:\Users\ramit\Desktop\Sem4\ACIT_3855_Architectures\lab2\test.jpg</stringProp>
                 <stringProp name="File.paramname">file</stringProp>
               </elementProp>
             </collectionProp>
@@ -90,7 +92,7 @@
               </elementProp>
               <elementProp name="fileSize" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">${randomfilesize}</stringProp>
+                <stringProp name="Argument.value">${__Random(1,100000)}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
                 <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 <stringProp name="Argument.name">fileSize</stringProp>
@@ -167,10 +169,10 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-  &quot;mediaId&quot;: &quot;${randommediaID}&quot;,&#xd;
-  &quot;playbackId&quot;: ${randomplaybackID},&#xd;
+  &quot;mediaId&quot;: &quot;${__Random(1,100)}&quot;,&#xd;
+  &quot;playbackId&quot;: ${__Random(1,10000)},&#xd;
   &quot;playbackStartTime&quot;: &quot;${__RandomDate(,,2050-07-08,,)} ${__Random(0,23,)}:${__Random(0,59,)}:${__Random(0,59,)}&quot;,&#xd;
-  &quot;userID&quot;: &quot;${randomuserID}&quot;&#xd;
+  &quot;userID&quot;: &quot;${__Random(1,100)}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
