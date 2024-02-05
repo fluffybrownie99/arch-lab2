@@ -2,10 +2,10 @@ from connexion import NoContent
 from update_event_data import update_event_data
 import connexion, requests, yaml, logging, logging.config, datetime, json, uuid
 #Log loader
-# with open('log_conf.yml', 'r') as f:
-#     log_config = yaml.safe_load(f.read())
-#     logging.config.dictConfig(log_config)
-# logger = logging.getLogger('basicLogger')
+with open('log_conf.yml', 'r') as f:
+    log_config = yaml.safe_load(f.read())
+    logging.config.dictConfig(log_config)
+logger = logging.getLogger('basicLogger')
 
 # URLs from YAML
 with open('app_conf.yml', 'r') as f:
@@ -19,13 +19,13 @@ with open('app_conf.yml', 'r') as f:
 def media_upload(body):
     # update_event_data("media_upload",body)
     trace_id = str(uuid.uuid4())
-    # logger.info(f'Recieved event "media_upload" request with a trace id of {trace_id}')
+    logger.info(f'Recieved event "media_upload" request with a trace id of {trace_id}')
     body['trace_id']=trace_id
     file_path = './test.jpg'
     files = {'file': open(file_path, 'rb')}
     media_upload_url = app_config["eventstore1"]["url"] 
     response = requests.post(media_upload_url, files=files, data=body)
-    # logger.info(f'Returned event "media_upload" response (Id: {trace_id}) with status {response.status_code}')
+    logger.info(f'Returned event "media_upload" response (Id: {trace_id}) with status {response.status_code}')
     return response.json(), 201  
 
 
@@ -33,11 +33,11 @@ def media_upload(body):
 def media_playback(body):
     # print(f'{body[mediaType]} \n{body[fileSize]} \n{body[uploadTime]} \n')
     trace_id = str(uuid.uuid4())
-    # logger.info(f'Recieved event "media_playback" request with a trace id of {trace_id}')
+    logger.info(f'Recieved event "media_playback" request with a trace id of {trace_id}')
     body['trace_id']=trace_id
     media_playback_url = app_config["eventstore2"]["url"] 
     response = requests.post(media_playback_url, json=body, headers={"Content-Type": "application/json"})
-    # logger.info(f'Returned event "media_playback" response (Id: {trace_id}) with status {response.status_code}')
+    logger.info(f'Returned event "media_playback" response (Id: {trace_id}) with status {response.status_code}')
     return response.json(), 201  
 
 
