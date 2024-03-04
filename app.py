@@ -39,7 +39,7 @@ def media_upload(body):
     msg_str = json.dumps(msg)
     producer.produce(msg_str.encode('utf-8'))
     
-    logger.info(f'Returned event "media_upload" response (Id: {trace_id}) with status {response.status_code}')
+    logger.info(f'Returned event "media_upload" response (Id: {trace_id}) with status 201')
     return json.loads(msg_str), 201  
 
 
@@ -62,7 +62,7 @@ def media_playback(body):
             "payload": body}
     msg_str = json.dumps(msg)
     producer.produce(msg_str.encode('utf-8'))
-    logger.info(f'Returned event "media_playback" response (Id: {trace_id}) with status {response.status_code}')
+    logger.info(f'Returned event "media_playback" response (Id: {trace_id}) with status 201')
     return json.loads(msg_str), 201  
 
 
